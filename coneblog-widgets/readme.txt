@@ -56,6 +56,10 @@ You Must Install and Activate Supported Page Builder (ie: Elementor) before inst
 
 You can post in plugin forums [Forums]( https://wordpress.org/support/plugin/coneblog-widgets/ "ConeBlog Plugin Help Forum")
 
+= How can I report security bugs? =
+
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/coneblog-widgets)
+
 
 == Screenshots ==
 
