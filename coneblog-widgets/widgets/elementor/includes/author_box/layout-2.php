@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	// Exit if accessed directly.
+	exit;
+}
 use ConeBlogWidgets\Classes\Helper;
 $tags = array(
     'img'   => array(

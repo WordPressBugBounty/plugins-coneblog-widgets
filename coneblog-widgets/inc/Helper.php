@@ -201,12 +201,7 @@ class Helper
      * @return string
      */
     public static function coneblog_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'styloblog' ),
-			'<span class="author vcard"><i class="icon-user"></i> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
-        $html = '<span class="byline"> ' . $byline . '</span>';
+        $html = '<span class="author vcard"><i class="icon-user"></i> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
         $tags = array(
             'span' => array(
                 'class' => array()
@@ -243,9 +238,9 @@ class Helper
             );
 			echo wp_kses('<span class="post-meta post-comments"><i class="icon-chat"></i> <a href="'.esc_url(get_comments_link( get_the_ID()) ).'">'. esc_html__(" 0", "coneblog-widgets") .'</a></span>', $tags);
 		} elseif($comment_count = 1){
-			echo wp_kses('<span class="post-meta post-comments"><i class="icon-chat"></i>'.esc_html($comment_count).' <a href="'.esc_url(get_comments_link( get_the_ID() )).'">'. esc_html__(" Comment", "flashwp-lite") .'</a></span>', $tags);
+			echo wp_kses('<span class="post-meta post-comments"><i class="icon-chat"></i>'.esc_html($comment_count).' <a href="'.esc_url(get_comments_link( get_the_ID() )).'">'. esc_html__(" Comment", "coneblog-widgets") .'</a></span>', $tags);
 		} else {
-			echo wp_kses('<span class="post-meta post-comments"><i class="icon-chat"></i>'.esc_html($comment_count).' <a href="'.esc_url(get_comments_link( get_the_ID() )).'">'. esc_html__(" Comments", "flashwp-lite") .'</a></span>', $tags);
+			echo wp_kses('<span class="post-meta post-comments"><i class="icon-chat"></i>'.esc_html($comment_count).' <a href="'.esc_url(get_comments_link( get_the_ID() )).'">'. esc_html__(" Comments", "coneblog-widgets") .'</a></span>', $tags);
 		}
 
     }

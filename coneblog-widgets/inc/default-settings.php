@@ -1,5 +1,6 @@
 <?php
-function coneblod_set_default_settings() {
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
+function coneblog_set_default_settings() {
     add_option('coneblog_builders_elementor', 'on');
     //add_option('coneblog_builders_wordpress', 'off');
     add_option('coneblog_widgets_posts_grid', 'on');

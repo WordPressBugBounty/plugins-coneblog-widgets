@@ -239,13 +239,14 @@ final class CONEBLOG_WIDGETS {
 	function coneblog_notice_missing_main_plugin() {
 
 		$message = sprintf(
-			__( '%1$s requires %2$s to be installed and activated to function properly. %3$s', 'coneblog-widgets' ),
-			'<strong>' . __( 'ConBlog Widgets - Elementor', 'coneblog-widgets' ) . '</strong>',
-			'<strong>' . __( 'Elementor', 'coneblog-widgets' ) . '</strong>',
-			'<a href="' . esc_url( admin_url( 'plugin-install.php?s=Elementor&tab=search&type=term' ) ) . '">' . __( 'Please click here to install/activate Elementor', 'coneblog-widgets' ) . '</a>'
+			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
+			esc_html__( '%1$s requires %2$s to be installed and activated to function properly. %3$s', 'coneblog-widgets' ),
+			'<strong>' . esc_html__( 'ConBlog Widgets - Elementor', 'coneblog-widgets' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'coneblog-widgets' ) . '</strong>',
+			'<a href="' . esc_url( admin_url( 'plugin-install.php?s=Elementor&tab=search&type=term' ) ) . '">' . esc_html__( 'Please click here to install/activate Elementor', 'coneblog-widgets' ) . '</a>'
 		);
-
-		printf( '<div class="notice notice-warning is-dismissible"><p style="padding: 5px 0">%1$s</p></div>', $message );
+		
+		printf( '<div class="notice notice-warning is-dismissible"><p style="padding: 5px 0">%1$s</p></div>', wp_kses_post( $message ) );		
 
 	}
 
@@ -270,7 +271,7 @@ final class CONEBLOG_WIDGETS {
 			MINIMUM_ELEMENTOR_VERSION
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
 
 	}
 
@@ -294,7 +295,7 @@ final class CONEBLOG_WIDGETS {
 			MINIMUM_PHP_VERSION
 		);
 
-		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message) );
 	}
 	
 }

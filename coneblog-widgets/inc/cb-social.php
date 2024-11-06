@@ -78,7 +78,7 @@ class ConeBlog_Social_Sharing {
         }
         if(is_archive()) {
             
-            $this->protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+            $this->protocol =  wp_is_ssl() ? 'https://' : 'http://';
 
             $this->page_title = get_the_archive_title();
             if ( is_category() ) {
@@ -92,8 +92,10 @@ class ConeBlog_Social_Sharing {
             } elseif ( is_tax() ) {
                 $this->page_title = single_term_title( '', false );
             }
+            if(isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI'])) {
+                $this->page_url = esc_url_raw( $this->protocol . sanitize_text_field( wp_unslash ($_SERVER['HTTP_HOST']) ) . sanitize_text_field( wp_unslash($_SERVER['REQUEST_URI']) ) );
+            }
             
-            $this->page_url = $this->protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
         }
         $position_class = '';

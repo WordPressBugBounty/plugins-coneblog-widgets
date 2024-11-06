@@ -6,6 +6,10 @@
  * @param string $field_id
  * @return string
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	// Exit if accessed directly.
+	exit;
+}
 function coneblog_settings_section_field($page, $field_id) {
     global $wp_settings_sections, $wp_settings_fields;
 

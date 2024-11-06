@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	// Exit if accessed directly.
+	exit;
+}
 function coneblog_options_page_html() {
     // check user capabilities
     if ( ! current_user_can( 'manage_options' ) ) {
@@ -79,7 +83,7 @@ function coneblog_options_page_html() {
                         // output security fields for the registered setting "coneblog"
                         settings_fields( 'cb-widgets' );
                         ?>
-                        <h2 class="panel-section-heading"><?php esc_html_e('Widgets') ?></h2>
+                        <h2 class="panel-section-heading"><?php esc_html_e('Widgets', 'coneblog-widgets') ?></h2>
                         <h3 class="panel-section-subheading"><?php esc_html_e( 'Select the widgets you want to enable.', 'coneblog-widgets' ); ?></h3>
                         <div class="form-fields-row widgets-row">
                             <?php
@@ -98,7 +102,7 @@ function coneblog_options_page_html() {
                         <?php
                     }
                     if($page_name == 'cb-support') { ?>
-                        <h2 class="panel-section-heading"><?php esc_html_e('Help & Support') ?></h2>
+                        <h2 class="panel-section-heading"><?php esc_html_e('Help & Support', 'coneblog-widgets') ?></h2>
                         <h3 class="panel-section-subheading"><?php esc_html_e( 'Feel free to reach us for help or support via any of the channel mentioned below.', 'coneblog-widgets' ); ?></h3>
                         <div class="cb-supoort-boxes-container">
 
@@ -139,7 +143,7 @@ function coneblog_options_page_html() {
                         // output security fields for the registered setting "coneblog"
                         settings_fields( 'cb-tools' );
                     ?>
-                        <h2 class="panel-section-heading"><?php esc_html_e('Tools') ?></h2>
+                        <h2 class="panel-section-heading"><?php esc_html_e('Tools', 'coneblog-widgets') ?></h2>
                         <h3 class="panel-section-subheading"><?php esc_html_e( 'Manage plugin features here.', 'coneblog-widgets' ); ?></h3>
                         <div class="form-field-row"><?php coneblog_settings_section_field( 'cb-tools', 'coneblog_tools_social_sharing' ); ?></div>
                         <div id="socilSubControls" class="form-field-row mt-10 sub-row<?php echo ( esc_attr(get_option('coneblog_tools_social_sharing') != "on" ? ' hidden' : '') ) ?>">

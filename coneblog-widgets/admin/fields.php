@@ -3,6 +3,10 @@
  * Setting fields callback functions
  * @param array $args
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	// Exit if accessed directly.
+	exit;
+}
 function coneblog_builders_elementor_field_cb( ) {
     $checked = '';
     $value = get_option('coneblog_builders_elementor');

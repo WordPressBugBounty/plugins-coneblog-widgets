@@ -2,6 +2,10 @@
 /**
  * Add the top level menu page.
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	// Exit if accessed directly.
+	exit;
+}
 function coneblog_options_page() {
     add_menu_page(
         'ConeBlog Widgets',

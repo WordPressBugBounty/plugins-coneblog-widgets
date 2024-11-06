@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: ConeBlog Widgets
+ * Plugin Name: ConeBlog - Elementor Blog Widgets
  * Description: Beautiful Blog widgets for WordPress, Elementor, and Page Builders.
  * Plugin URI:  https://wpcone.com/plugins/coneblog-widgets/
- * Version:     1.5.0
+ * Version:     1.5.2
  * Author:      WPCone.com
  * Author URI:  https://wpcone.com
  * License: GPL v2 or later
@@ -13,7 +13,7 @@
  * Elementor tested up to: 3.23.0
  * Elementor Pro tested up to: 3.23.0
  */
-
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
 if(!defined('CONEBLOG_WIDGETS')) {
     define( 'CONEBLOG_WIDGETS', __FILE__ );
 }

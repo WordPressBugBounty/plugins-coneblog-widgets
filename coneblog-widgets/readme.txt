@@ -3,7 +3,7 @@ Contributors: wpconedev,mianshahzadraza
 Tags: blog widgets, elementor, gutenberg, blog, coneblog
 Requires at least: 6.0
 Tested up to: 6.6
-Stable tag: 1.5.0
+Stable tag: 1.5.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -74,6 +74,9 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 9. Admin Panel - Social Sharing
 
 == Changelog ==
+
+= 1.5.1 =
+*Fixed security and translation issues
 
 = 1.5.0 =
 * Removed deprecated elementor methods
