@@ -3,7 +3,7 @@
  * Plugin Name: ConeBlog - Elementor Blog Widgets
  * Description: Beautiful Blog widgets for WordPress, Elementor, and Page Builders.
  * Plugin URI:  https://wpcone.com/plugins/coneblog-widgets/
- * Version:     1.5.2
+ * Version:     1.5.3
  * Author:      WPCone.com
  * Author URI:  https://wpcone.com
  * License: GPL v2 or later
@@ -46,4 +46,4 @@ require CONEBLOG_PLUGIN_PATH . 'plugin-settings.php';
  * Register default settings
  */
 require CONEBLOG_PLUGIN_PATH . 'inc/default-settings.php';
-register_activation_hook( CONEBLOG_WIDGETS, 'coneblod_set_default_settings' );
+register_activation_hook( CONEBLOG_WIDGETS, 'coneblog_set_default_settings' );
